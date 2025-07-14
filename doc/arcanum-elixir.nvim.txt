@@ -1,51 +1,128 @@
-*arcanum-elixir.nvim.txt*         For Neovim >= 0.8.0        Last change: 2025 June 01
+*arcanum-elixir.nvim.txt*     For Neovim >= 0.8.0    Last change: 2025 July 14
 
 ==============================================================================
-Table of Contents                             *arcanum-elixir.nvim-table-of-contents*
+Table of Contents                      *arcanum-elixir.nvim-table-of-contents*
 
-1. Prerequisites                                  |arcanum-elixir.nvim-prerequisites|
-2. Installing                                        |arcanum-elixir.nvim-installing|
-  - Using packer                        |arcanum-elixir.nvim-installing-using-packer|
-  - Using lazy.nvim                  |arcanum-elixir.nvim-installing-using-lazy.nvim|
-  - Using vim-plug                    |arcanum-elixir.nvim-installing-using-vim-plug|
-3. Basic Usage                                      |arcanum-elixir.nvim-basic-usage|
-4. Configuration                                  |arcanum-elixir.nvim-configuration|
-  - Overriding                         |arcanum-elixir.nvim-configuration-overriding|
+  - Preview                                      |arcanum-elixir.nvim-preview|
+  - About ArcanumElixir              |arcanum-elixir.nvim-about-arcanumelixir|
+  - Requirements                            |arcanum-elixir.nvim-requirements|
+  - Installation                            |arcanum-elixir.nvim-installation|
+  - Quick Start                              |arcanum-elixir.nvim-quick-start|
+  - Configuration                          |arcanum-elixir.nvim-configuration|
+  - Acknowledgments                      |arcanum-elixir.nvim-acknowledgments|
+  - License                                      |arcanum-elixir.nvim-license|
+1. Links                                           |arcanum-elixir.nvim-links|
 
-A beautiful and elegant Neovim colorscheme with treesitter
-<https://github.com/nvim-treesitter/nvim-treesitter> and |semantic highlights|
-support! Now available in both light and dark themes with sepia tones.
 
-==============================================================================
-1. Prerequisites                                  *arcanum-elixir.nvim-prerequisites*
+PREVIEW                                          *arcanum-elixir.nvim-preview*
 
-Neovim 0.8.0+
 
-==============================================================================
-2. Installing                                        *arcanum-elixir.nvim-installing*
 
-USING PACKER                            *arcanum-elixir.nvim-installing-using-packer*
+ABOUT ARCANUMELIXIR                  *arcanum-elixir.nvim-about-arcanumelixir*
+
+**arcanum-elixir.nvim** is a mystical Neovim colorscheme designed with an
+emphasis on **light mode development** while now offering a refined **dark mode
+companion**. Created for developers who value both functionality and magical
+aesthetic elegance, ArcanumElixir transforms the familiar earthtone palette
+into a refined purple experience inspired by Elixir’s mystical powers.
+
+**Light Theme Primary:** ArcanumElixir’s light theme remains the primary
+focus, exclusively designed for light backgrounds to achieve the intended
+mystical coding atmosphere inspired by ancient arcane manuscripts.
+
+**Dark Theme Available:** The new dark companion maintains the same purple
+harmony and mystical elegance, carefully adapted for low-light environments
+while preserving the arcane aesthetic.
+
+
+DESIGN PHILOSOPHY ~
+
+ArcanumElixir draws its inspiration from the **mystical purple tones** of
+**Elixir**, which uses enchanting, magical colors that reduce eye strain during
+extended coding sessions. This same principle applies to development - the
+purple palette creates a comfortable, mystical atmosphere perfect for long
+coding sessions, research, and thoughtful programming.
+
+**Why purple tones for both light and dark?** - **Reduced eye fatigue** during
+extended coding sessions in any lighting condition - **Mystical ambiance**
+reminiscent of ancient arcane manuscripts and magical libraries -
+**Professional appearance** suitable for magical and alchemical environments -
+**Enchanting, inviting atmosphere** that encourages focused spellcasting -
+**Adaptable** - Light theme for bright environments, dark theme for low-light
+settings - **Consistent aesthetic** - Both themes maintain the same arcane
+character
+
+
+KEY FEATURES ~
+
+- **Dual theme support** - Primary light theme with companion dark theme
+- **Based on gruvbox.nvim** - Inherits the robust architecture and reliability
+- **Purple color palette** - Mystical, arcane tones inspired by Elixir
+- **Full treesitter support** - Enhanced syntax highlighting
+- **LSP semantic highlights** - Modern language server integration
+- **Customizable** - Extensive configuration options
+- **Mystical focus** - Perfect for research, documentation, and magical coding
+- **Light/Dark harmony** - Both themes share the same arcane aesthetic principles
+
+
+REQUIREMENTS                                *arcanum-elixir.nvim-requirements*
+
+- Neovim 0.8.0+
+
+
+INSTALLATION                                *arcanum-elixir.nvim-installation*
+
+
+USING LAZY.NVIM (RECOMMENDED) ~
 
 >lua
-    use { "abreujp/arcanum-elixir.nvim" }
+    {
+      "abreujp/arcanum-elixir.nvim",
+      priority = 1000,
+      config = function()
+        require("arcanum-elixir").setup({
+          -- your configuration here
+        })
+        
+        -- For light theme (primary)
+        vim.o.background = "light"
+        vim.cmd("colorscheme arcanum-elixir")
+        
+        -- OR for dark theme
+        -- vim.o.background = "dark"
+        -- vim.cmd("colorscheme arcanum-elixir")
+      end,
+    }
 <
 
-USING LAZY.NVIM                      *arcanum-elixir.nvim-installing-using-lazy.nvim*
+
+USING PACKER ~
 
 >lua
-    { "abreujp/arcanum-elixir.nvim", priority = 1000 , config = true, opts = ...}
+    use {
+      "abreujp/arcanum-elixir.nvim",
+      config = function()
+        require("arcanum-elixir").setup()
+        
+        -- Choose your preferred theme
+        vim.o.background = "light"  -- For light theme
+        vim.cmd("colorscheme arcanum-elixir")
+        
+        -- OR use: 
+        -- vim.o.background = "dark"
+        -- vim.cmd("colorscheme arcanum-elixir") for dark theme
+      end
+    }
 <
 
-USING VIM-PLUG                        *arcanum-elixir.nvim-installing-using-vim-plug*
+
+USING VIM-PLUG ~
 
 >vim
     Plug 'abreujp/arcanum-elixir.nvim'
 <
 
-==============================================================================
-3. Basic Usage                                      *arcanum-elixir.nvim-basic-usage*
-
-Inside `init.vim`
+Then in your init.vim:
 
 >vim
     " For light theme (primary)
@@ -57,104 +134,131 @@ Inside `init.vim`
     " colorscheme arcanum-elixir
 <
 
-Inside `init.lua`
+
+QUICK START                                  *arcanum-elixir.nvim-quick-start*
+
+
+LUA CONFIGURATION ~
 
 >lua
-    -- For light theme (primary)
-    vim.o.background = "light"
-    vim.cmd([[colorscheme arcanum-elixir]])
+    require("arcanum-elixir").setup({
+      contrast = "soft",  -- "hard", "soft" or "" (default)
+      transparent_mode = false,
+    })
+    
+    -- Choose your preferred theme
+    vim.o.background = "light"  -- For light theme
+    vim.cmd("colorscheme arcanum-elixir")
     
     -- OR for dark theme
     -- vim.o.background = "dark"
-    -- vim.cmd([[colorscheme arcanum-elixir]])
+    -- vim.cmd("colorscheme arcanum-elixir")
 <
+
+
+VIM CONFIGURATION ~
+
+>vim
+    " For light theme (primary)
+    set background=light
+    colorscheme arcanum-elixir
+    
+    " OR for dark theme
+    " set background=dark
+    " colorscheme arcanum-elixir
+<
+
+
+CONFIGURATION                              *arcanum-elixir.nvim-configuration*
+
+ArcanumElixir provides extensive customization options while maintaining
+sensible defaults:
+
+>lua
+    require("arcanum-elixir").setup({
+      terminal_colors = true,     -- Enable terminal colors
+      undercurl = true,          -- Enable undercurls for diagnostics
+      underline = true,          -- Enable underlines
+      bold = true,               -- Enable bold text
+      italic = {
+        strings = true,          -- Italicize strings
+        emphasis = true,         -- Italicize emphasized text
+        comments = true,         -- Italicize comments
+        operators = false,       -- Don't italicize operators
+        folds = true,           -- Italicize fold text
+      },
+      strikethrough = true,      -- Enable strikethrough
+      invert_selection = false,  -- Don't invert selections
+      invert_signs = false,      -- Don't invert sign column
+      invert_tabline = false,    -- Don't invert tabline
+      inverse = true,            -- Invert background for search, diffs, etc.
+      contrast = "",             -- Contrast level: "hard", "soft", or ""
+      palette_overrides = {},    -- Override palette colors
+      overrides = {},            -- Override highlight groups
+      dim_inactive = false,      -- Don't dim inactive windows
+      transparent_mode = false,  -- Disable transparent background
+    })
+<
+
+**Important:** Always call `setup()` before setting the colorscheme!
+
+
+PALETTE CUSTOMIZATION ~
+
+Override specific colors while maintaining the sepia harmony:
+
+>lua
+    require("arcanum-elixir").setup({
+      palette_overrides = {
+        bright_red = "#CC6666",    -- Custom error color
+        gray = "#999999",          -- Custom comment color
+      }
+    })
+<
+
+
+HIGHLIGHT GROUP OVERRIDES ~
+
+Customize specific highlighting:
+
+>lua
+    require("arcanum-elixir").setup({
+      overrides = {
+        -- UI elements
+        SignColumn = { bg = "#F5F5DC" },
+        
+        -- Treesitter groups
+        ["@comment.lua"] = { fg = "#8B7355", italic = true },
+        ["@string"] = { fg = "#8B6F47" },
+        
+        -- LSP semantic tokens
+        ["@lsp.type.method"] = { fg = "#A0623A", bold = true },
+      }
+    })
+<
+
+
+ACKNOWLEDGMENTS                          *arcanum-elixir.nvim-acknowledgments*
+
+**arcanum-elixir.nvim** is built upon the excellent foundation of gruvbox.nvim
+<https://github.com/ellisonleao/gruvbox.nvim> by @ellisonleao
+<https://github.com/ellisonleao>. The robust architecture and thoughtful design
+of gruvbox made ArcanumElixir possible.
+
+**Color inspiration** comes from the mystical purple tones of the Elixir
+<https://elixir-lang.org/> programming language, which demonstrates how
+enchanting, magical colors can reduce eye strain and create a comfortable
+coding environment.
+
+
+LICENSE                                          *arcanum-elixir.nvim-license*
+
+MIT License - see LICENSE <LICENSE> for details.
 
 ==============================================================================
-4. Configuration                                  *arcanum-elixir.nvim-configuration*
+1. Links                                           *arcanum-elixir.nvim-links*
 
-Additional settings for arcanum-elixir are:
-
->lua
-    -- Default options:
-    require("arcanum-elixir").setup({
-      terminal_colors = true, -- add neovim terminal colors
-      undercurl = true,
-      underline = true,
-      bold = true,
-      italic = {
-        strings = true,
-        emphasis = true,
-        comments = true,
-        operators = false,
-        folds = true,
-      },
-      strikethrough = true,
-      invert_selection = false,
-      invert_signs = false,
-      invert_tabline = false,
-      inverse = true, -- invert background for search, diffs, statuslines and errors
-      contrast = "", -- can be "hard", "soft" or empty string
-      palette_overrides = {},
-      overrides = {},
-      dim_inactive = false,
-      transparent_mode = false,
-    })
-    vim.cmd("colorscheme arcanum-elixir")
-<
-
-**VERY IMPORTANT**Make sure to call setup() **BEFORE** calling the colorscheme
-command, to use your custom configs
-
-OVERRIDING                             *arcanum-elixir.nvim-configuration-overriding*
-
-PALETTE ~
-
-You can specify your own palette colors. For example:
-
->lua
-    require("arcanum-elixir").setup({
-        palette_overrides = {
-            bright_green = "#990000",
-        }
-    })
-    vim.cmd("colorscheme arcanum-elixir")
-<
-
-HIGHLIGHT GROUPS ~
-
-If you don't enjoy the current color for a specific highlight group, now you
-can just override it in the setup. For example:
-
->lua
-    require("arcanum-elixir").setup({
-        overrides = {
-            SignColumn = {bg = "#ff9900"}
-        }
-    })
-    vim.cmd("colorscheme arcanum-elixir")
-<
-
-It also works with treesitter groups and lsp semantic highlight tokens
-
->lua
-    require("arcanum-elixir").setup({
-        overrides = {
-            ["@lsp.type.method"] = { bg = "#ff9900" },
-            ["@comment.lua"] = { bg = "#000000" },
-        }
-    })
-    vim.cmd("colorscheme arcanum-elixir")
-<
-
-Please note that the override values must follow the attributes from the
-highlight group map, such as:
-
-- **fg** - foreground color
-- **bg** - background color
-- **bold** - true or false for bold font
-- **italic** - true or false for italic font
-
-Other values can be seen in |`synIDattr`|
+1. *@ellisonleao*: 
 
 Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
 
