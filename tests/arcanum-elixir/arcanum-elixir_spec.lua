@@ -1,5 +1,5 @@
-require("plenary.reload").reload_module("arcanum-elixir", true)
-local arcanum_elixir = require("arcanum-elixir")
+require("plenary.reload").reload_module("arcanum_elixir", true)
+local arcanum_elixir = require("arcanum_elixir")
 local default = arcanum_elixir.config
 
 local function clear_term_colors()

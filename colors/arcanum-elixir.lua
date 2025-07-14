@@ -1,1 +1,0 @@
-require("arcanum-elixir").load()
