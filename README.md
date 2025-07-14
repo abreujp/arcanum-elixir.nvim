@@ -74,17 +74,17 @@ ArcanumElixir draws its inspiration from the **mystical purple tones** of **Elix
   "abreujp/arcanum-elixir.nvim",
   priority = 1000,
   config = function()
-    require("arcanum-elixir").setup({
+    require("arcanum_elixir").setup({
       -- your configuration here
     })
     
     -- For light theme (primary)
     vim.o.background = "light"
-    vim.cmd("colorscheme arcanum-elixir")
+    vim.cmd("colorscheme arcanum_elixir")
     
     -- OR for dark theme
     -- vim.o.background = "dark"
-    -- vim.cmd("colorscheme arcanum-elixir")
+    -- vim.cmd("colorscheme arcanum_elixir")
   end,
 }
 ```
@@ -95,15 +95,15 @@ ArcanumElixir draws its inspiration from the **mystical purple tones** of **Elix
 use {
   "abreujp/arcanum-elixir.nvim",
   config = function()
-    require("arcanum-elixir").setup()
+    require("arcanum_elixir").setup()
     
     -- Choose your preferred theme
     vim.o.background = "light"  -- For light theme
-    vim.cmd("colorscheme arcanum-elixir")
+    vim.cmd("colorscheme arcanum_elixir")
     
     -- OR use: 
     -- vim.o.background = "dark"
-    -- vim.cmd("colorscheme arcanum-elixir") for dark theme
+    -- vim.cmd("colorscheme arcanum_elixir") for dark theme
   end
 }
 ```
@@ -118,11 +118,11 @@ Then in your init.vim:
 ```vim
 " For light theme (primary)
 set background=light
-colorscheme arcanum-elixir
+colorscheme arcanum_elixir
 
 " OR for dark theme
 " set background=dark
-" colorscheme arcanum-elixir
+" colorscheme arcanum_elixir
 ```
 
 ## 🚀 Quick Start
@@ -130,18 +130,18 @@ colorscheme arcanum-elixir
 ### Lua Configuration
 
 ```lua
-require("arcanum-elixir").setup({
+require("arcanum_elixir").setup({
   contrast = "soft",  -- "hard", "soft" or "" (default)
   transparent_mode = false,
 })
 
 -- Choose your preferred theme
 vim.o.background = "light"  -- For light theme
-vim.cmd("colorscheme arcanum-elixir")
+vim.cmd("colorscheme arcanum_elixir")
 
 -- OR for dark theme
 -- vim.o.background = "dark"
--- vim.cmd("colorscheme arcanum-elixir")
+-- vim.cmd("colorscheme arcanum_elixir")
 ```
 
 ### Vim Configuration
@@ -149,11 +149,11 @@ vim.cmd("colorscheme arcanum-elixir")
 ```vim
 " For light theme (primary)
 set background=light
-colorscheme arcanum-elixir
+colorscheme arcanum_elixir
 
 " OR for dark theme
 " set background=dark
-" colorscheme arcanum-elixir
+" colorscheme arcanum_elixir
 ```
 
 ## ⚙️ Configuration
@@ -161,7 +161,7 @@ colorscheme arcanum-elixir
 ArcanumElixir provides extensive customization options while maintaining sensible defaults:
 
 ```lua
-require("arcanum-elixir").setup({
+require("arcanum_elixir").setup({
   terminal_colors = true,     -- Enable terminal colors
   undercurl = true,          -- Enable undercurls for diagnostics
   underline = true,          -- Enable underlines
@@ -193,7 +193,7 @@ require("arcanum-elixir").setup({
 Override specific colors while maintaining the sepia harmony:
 
 ```lua
-require("arcanum-elixir").setup({
+require("arcanum_elixir").setup({
   palette_overrides = {
     bright_red = "#CC6666",    -- Custom error color
     gray = "#999999",          -- Custom comment color
@@ -206,7 +206,7 @@ require("arcanum-elixir").setup({
 Customize specific highlighting:
 
 ```lua
-require("arcanum-elixir").setup({
+require("arcanum_elixir").setup({
   overrides = {
     -- UI elements
     SignColumn = { bg = "#F5F5DC" },
