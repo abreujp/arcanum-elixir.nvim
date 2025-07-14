@@ -1,6 +1,6 @@
-require("plenary.reload").reload_module("arcanum-elixir", true)
-local arcanum-elixir = require("arcanum-elixir")
-local default = arcanum-elixir.config
+require("plenary.reload").reload_module("arcanum_elixir", true)
+local arcanum_elixir = require("arcanum_elixir")
+local default = arcanum_elixir.config
 
 local function clear_term_colors()
   for item = 0, 15 do
@@ -10,8 +10,8 @@ end
 
 describe("tests", function()
   it("works with default values", function()
-    arcanum-elixir.setup()
-    assert.are.same(arcanum-elixir.config, default)
+    arcanum_elixir.setup()
+    assert.are.same(arcanum_elixir.config, default)
   end)
 
   it("works with config overrides", function()
@@ -39,8 +39,8 @@ describe("tests", function()
       transparent_mode = false,
     }
 
-    arcanum-elixir.setup({ undercurl = false, underline = false })
-    assert.are.same(arcanum-elixir.config, expected)
+    arcanum_elixir.setup({ undercurl = false, underline = false })
+    assert.are.same(arcanum_elixir.config, expected)
   end)
 
   it("should override a hightlight color", function()
@@ -51,8 +51,8 @@ describe("tests", function()
       },
     }
 
-    arcanum-elixir.setup(config)
-    arcanum-elixir.load()
+    arcanum_elixir.setup(config)
+    arcanum_elixir.load()
 
     local search_group_id = vim.api.nvim_get_hl_id_by_name("Search")
     local search_values = {
@@ -78,8 +78,8 @@ describe("tests", function()
       },
     }
 
-    arcanum-elixir.setup(config)
-    arcanum-elixir.load()
+    arcanum_elixir.setup(config)
+    arcanum_elixir.load()
 
     local search_group_id = vim.api.nvim_get_hl_id_by_name("Search")
     local search_values = {
@@ -103,8 +103,8 @@ describe("tests", function()
         TelescopePreviewBorder = { fg = "#990000", bg = nil },
       },
     }
-    arcanum-elixir.setup(config)
-    arcanum-elixir.load()
+    arcanum_elixir.setup(config)
+    arcanum_elixir.load()
 
     local group_id = vim.api.nvim_get_hl_id_by_name("TelescopePreviewBorder")
     local values = {
@@ -127,8 +127,8 @@ describe("tests", function()
 
     -- Test with light background
     vim.opt.background = "light"
-    arcanum-elixir.setup(config)
-    arcanum-elixir.load()
+    arcanum_elixir.setup(config)
+    arcanum_elixir.load()
 
     local group_id = vim.api.nvim_get_hl_id_by_name("Comment")
     local values = {
@@ -138,8 +138,8 @@ describe("tests", function()
 
     -- Test with dark background
     vim.opt.background = "dark"
-    arcanum-elixir.setup(config)
-    arcanum-elixir.load()
+    arcanum_elixir.setup(config)
+    arcanum_elixir.load()
 
     local dark_group_id = vim.api.nvim_get_hl_id_by_name("Comment")
     local dark_values = {
@@ -150,54 +150,54 @@ describe("tests", function()
 
   it("does not set terminal colors when terminal_colors is false", function()
     clear_term_colors()
-    arcanum-elixir.setup({ terminal_colors = false })
-    arcanum-elixir.load()
+    arcanum_elixir.setup({ terminal_colors = false })
+    arcanum_elixir.load()
     assert.is_nil(vim.g.terminal_color_0)
   end)
 
   it("sets terminal colors when terminal_colors is true", function()
     clear_term_colors()
-    arcanum-elixir.setup({ terminal_colors = true })
+    arcanum_elixir.setup({ terminal_colors = true })
 
     -- light bg
     vim.opt.background = "light"
-    arcanum-elixir.load()
-    local colors = require("arcanum-elixir").palette
+    arcanum_elixir.load()
+    local colors = require("arcanum_elixir").palette
     assert.are.same(vim.g.terminal_color_0, colors.light0)
 
     -- dark bg
     clear_term_colors()
     vim.opt.background = "dark"
-    arcanum-elixir.load()
+    arcanum_elixir.load()
     assert.are.same(vim.g.terminal_color_0, colors.dark_bg0)
   end)
 
   it("works with dark theme colors", function()
     vim.opt.background = "dark"
-    arcanum-elixir.setup({ terminal_colors = false })
-    arcanum-elixir.load()
+    arcanum_elixir.setup({ terminal_colors = false })
+    arcanum_elixir.load()
 
     local normal_group_id = vim.api.nvim_get_hl_id_by_name("Normal")
     local normal_bg = vim.fn.synIDattr(normal_group_id, "bg", "gui"):lower()
     local normal_fg = vim.fn.synIDattr(normal_group_id, "fg", "gui"):lower()
 
     -- Should use dark theme colors
-    local colors = require("arcanum-elixir").palette
+    local colors = require("arcanum_elixir").palette
     assert.are.same(normal_bg, colors.dark_bg0:lower())
     assert.are.same(normal_fg, colors.light_fg1:lower())
   end)
 
   it("works with light theme colors", function()
     vim.opt.background = "light"
-    arcanum-elixir.setup({ terminal_colors = false })
-    arcanum-elixir.load()
+    arcanum_elixir.setup({ terminal_colors = false })
+    arcanum_elixir.load()
 
     local normal_group_id = vim.api.nvim_get_hl_id_by_name("Normal")
     local normal_bg = vim.fn.synIDattr(normal_group_id, "bg", "gui"):lower()
     local normal_fg = vim.fn.synIDattr(normal_group_id, "fg", "gui"):lower()
 
     -- Should use light theme colors
-    local colors = require("arcanum-elixir").palette
+    local colors = require("arcanum_elixir").palette
     assert.are.same(normal_bg, colors.light0:lower())
     assert.are.same(normal_fg, colors.dark1:lower())
   end)
