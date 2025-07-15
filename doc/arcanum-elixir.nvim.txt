@@ -1,4 +1,4 @@
-*arcanum-elixir.nvim.txt*     For Neovim >= 0.8.0    Last change: 2025 July 14
+*arcanum-elixir.nvim.txt*     For Neovim >= 0.8.0    Last change: 2025 July 15
 
 ==============================================================================
 Table of Contents                      *arcanum-elixir.nvim-table-of-contents*
@@ -23,9 +23,10 @@ ABOUT ARCANUMELIXIR                  *arcanum-elixir.nvim-about-arcanumelixir*
 **arcanum-elixir.nvim** is a mystical Neovim colorscheme available in both
 light and dark themes. Created for developers who value both functionality and
 magical aesthetic elegance, ArcanumElixir transforms the familiar earthtone
-palette into a refined purple experience inspired by Elixir's mystical powers.
+palette into a refined purple experience inspired by Elixir’s mystical
+powers.
 
-**Light Theme:** ArcanumElixir's light theme is designed for bright
+**Light Theme:** ArcanumElixir’s light theme is designed for bright
 environments, achieving the intended mystical coding atmosphere inspired by
 ancient arcane manuscripts.
 
