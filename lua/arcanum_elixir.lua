@@ -71,140 +71,140 @@ ArcanumElixir.config = {
 -- main arcanum-elixir color palette
 ---@class ArcanumElixirPalette
 ArcanumElixir.palette = {
-  -- Background tones (lightest to medium - APENAS ROXOS DO ELIXIR)
-  light0_hard = "#E6D4F2", -- Hardest light background - roxo lavender claro
-  light0 = "#E3D1F0", -- Default light background - roxo elixir principal
-  light0_soft = "#E0CEEE", -- Softest light background - roxo suave
-  light1 = "#DCC8EB", -- Light tone variation - roxo cream
-  light2 = "#D5BEE6", -- Medium light tone - roxo médio claro
-  light3 = "#CDB2E0", -- Medium tone - roxo lavender médio
-  light4 = "#C4A5D9", -- Medium dark tone - roxo violeta
+  -- Background tones (lightest to medium - ONLY ELIXIR PURPLES)
+  light0_hard = "#E6D4F2", -- Hardest light background - light lavender purple
+  light0 = "#E3D1F0", -- Default light background - main elixir purple
+  light0_soft = "#E0CEEE", -- Softest light background - soft purple
+  light1 = "#DCC8EB", -- Light tone variation - cream purple
+  light2 = "#D5BEE6", -- Medium light tone - medium light purple
+  light3 = "#CDB2E0", -- Medium tone - medium lavender purple
+  light4 = "#C4A5D9", -- Medium dark tone - violet purple
 
-  -- Text tones (darkest to medium - APENAS ROXOS ESCUROS)
-  dark0_hard = "#1F0640", -- Deepest text - roxo mais escuro
-  dark0 = "#260A43", -- Primary text - roxo escuro principal (baseado no logo)
-  dark0_soft = "#2E1148", -- Soft variant - roxo escuro suave
-  dark1 = "#37184F", -- Primary text consistency - roxo secundário
-  dark2 = "#412157", -- Secondary text - roxo terciário
-  dark3 = "#4C2A60", -- Tertiary text - roxo quaternário
-  dark4 = "#58346A", -- Quaternary text - roxo mais claro
+  -- Text tones (darkest to medium - ONLY DARK PURPLES)
+  dark0_hard = "#1F0640", -- Deepest text - darkest purple
+  dark0 = "#260A43", -- Primary text - main dark purple (based on logo)
+  dark0_soft = "#2E1148", -- Soft variant - soft dark purple
+  dark1 = "#37184F", -- Primary text consistency - secondary purple
+  dark2 = "#412157", -- Secondary text - tertiary purple
+  dark3 = "#4C2A60", -- Tertiary text - quaternary purple
+  dark4 = "#58346A", -- Quaternary text - lighter purple
 
-  -- Dark theme background tones (darkest to medium - APENAS ROXOS ESCUROS)
-  dark_bg0_hard = "#150633", -- Hardest dark background - roxo charcoal
-  dark_bg0 = "#190A38", -- Default dark background - roxo escuro principal
-  dark_bg0_soft = "#1E0F3D", -- Softest dark background - roxo escuro suave
-  dark_bg1 = "#251544", -- Dark tone variation - roxo escuro variação
-  dark_bg2 = "#2D1C4B", -- Medium dark tone - roxo médio escuro
-  dark_bg3 = "#362454", -- Medium tone - roxo médio
-  dark_bg4 = "#402D5E", -- Medium light tone - roxo médio claro
+  -- Dark theme background tones (darkest to medium - ONLY DARK PURPLES)
+  dark_bg0_hard = "#150633", -- Hardest dark background - charcoal purple
+  dark_bg0 = "#190A38", -- Default dark background - main dark purple
+  dark_bg0_soft = "#1E0F3D", -- Softest dark background - soft dark purple
+  dark_bg1 = "#251544", -- Dark tone variation - dark purple variation
+  dark_bg2 = "#2D1C4B", -- Medium dark tone - medium dark purple
+  dark_bg3 = "#362454", -- Medium tone - medium purple
+  dark_bg4 = "#402D5E", -- Medium light tone - medium light purple
 
-  -- Dark theme text tones (lightest to medium - APENAS ROXOS CLAROS)
-  light_fg0_hard = "#EDE2F5", -- Brightest text - roxo mais claro
-  light_fg0 = "#E8DCF2", -- Primary text - roxo claro principal
-  light_fg0_soft = "#E3D5EF", -- Soft variant - roxo claro suave
-  light_fg1 = "#DDCDEB", -- Primary text consistency - roxo claro secundário
-  light_fg2 = "#D6C4E7", -- Secondary text - roxo claro terciário
-  light_fg3 = "#CEBAE2", -- Tertiary text - roxo claro quaternário
-  light_fg4 = "#C5AFDD", -- Quaternary text - roxo claro mais escuro
+  -- Dark theme text tones (lightest to medium - ONLY LIGHT PURPLES)
+  light_fg0_hard = "#EDE2F5", -- Brightest text - lightest purple
+  light_fg0 = "#E8DCF2", -- Primary text - main light purple
+  light_fg0_soft = "#E3D5EF", -- Soft variant - soft light purple
+  light_fg1 = "#DDCDEB", -- Primary text consistency - secondary light purple
+  light_fg2 = "#D6C4E7", -- Secondary text - tertiary light purple
+  light_fg3 = "#CEBAE2", -- Tertiary text - quaternary light purple
+  light_fg4 = "#C5AFDD", -- Quaternary text - darker light purple
 
-  -- Syntax colors (APENAS VARIAÇÕES DE ROXO - diferentes matizes 260-290°)
-  neutral_red = "#761F93", -- errors/warnings - roxo magenta (285°)
-  neutral_green = "#492183", -- strings - roxo azulado (265°)
-  neutral_yellow = "#781DA5", -- keywords - roxo brilhante (280°)
-  neutral_blue = "#4D2277", -- functions - roxo profundo (270°)
-  neutral_purple = "#7319B3", -- types - roxo principal saturado (275°)
-  neutral_aqua = "#3F1E6E", -- constants - roxo azulado escuro (265°)
-  neutral_orange = "#761F93", -- numbers/special - roxo magenta (igual red)
+  -- Syntax colors (ONLY PURPLE VARIATIONS - different hues 260-290°)
+  neutral_red = "#761F93", -- errors/warnings - magenta purple (285°)
+  neutral_green = "#492183", -- strings - bluish purple (265°)
+  neutral_yellow = "#781DA5", -- keywords - bright purple (280°)
+  neutral_blue = "#4D2277", -- functions - deep purple (270°)
+  neutral_purple = "#7319B3", -- types - saturated main purple (275°)
+  neutral_aqua = "#3F1E6E", -- constants - dark bluish purple (265°)
+  neutral_orange = "#761F93", -- numbers/special - magenta purple (same as red)
 
-  -- Dark theme syntax colors (ROXOS MAIS CLAROS para contraste)
-  dark_neutral_red = "#B566CC", -- errors/warnings - roxo magenta claro
-  dark_neutral_green = "#8766B8", -- strings - roxo azulado claro
-  dark_neutral_yellow = "#BC6FD9", -- keywords - roxo brilhante claro
-  dark_neutral_blue = "#9266B3", -- functions - roxo profundo claro
-  dark_neutral_purple = "#C266E0", -- types - roxo principal claro
-  dark_neutral_aqua = "#7B66A3", -- constants - roxo azulado médio claro
-  dark_neutral_orange = "#B566CC", -- numbers/special - roxo magenta claro
+  -- Dark theme syntax colors (LIGHTER PURPLES for contrast)
+  dark_neutral_red = "#B566CC", -- errors/warnings - light magenta purple
+  dark_neutral_green = "#8766B8", -- strings - light bluish purple
+  dark_neutral_yellow = "#BC6FD9", -- keywords - light bright purple
+  dark_neutral_blue = "#9266B3", -- functions - light deep purple
+  dark_neutral_purple = "#C266E0", -- types - light main purple
+  dark_neutral_aqua = "#7B66A3", -- constants - light medium bluish purple
+  dark_neutral_orange = "#B566CC", -- numbers/special - light magenta purple
 
-  -- Bright colors (ROXOS BRILHANTES)
-  bright_red = "#9933B8", -- roxo magenta brilhante
-  bright_green = "#6B4D99", -- roxo azulado brilhante
-  bright_yellow = "#A642D6", -- roxo brilhante principal
-  bright_blue = "#704D99", -- roxo profundo brilhante
-  bright_purple = "#A633E6", -- roxo principal brilhante
-  bright_aqua = "#5C4D8A", -- roxo azulado brilhante escuro
-  bright_orange = "#9933B8", -- roxo magenta brilhante (igual red)
+  -- Bright colors (BRIGHT PURPLES)
+  bright_red = "#9933B8", -- bright magenta purple
+  bright_green = "#6B4D99", -- bright bluish purple
+  bright_yellow = "#A642D6", -- main bright purple
+  bright_blue = "#704D99", -- bright deep purple
+  bright_purple = "#A633E6", -- bright main purple
+  bright_aqua = "#5C4D8A", -- dark bright bluish purple
+  bright_orange = "#9933B8", -- bright magenta purple (same as red)
 
-  -- Dark theme bright colors (ROXOS SUPER CLAROS)
-  dark_bright_red = "#D999E6", -- roxo magenta super claro
-  dark_bright_green = "#B399D1", -- roxo azulado super claro
-  dark_bright_yellow = "#E699F5", -- roxo brilhante super claro
-  dark_bright_blue = "#C299D6", -- roxo profundo super claro
-  dark_bright_purple = "#E699FF", -- roxo principal super claro
-  dark_bright_aqua = "#A699C7", -- roxo azulado super claro
-  dark_bright_orange = "#D999E6", -- roxo magenta super claro
+  -- Dark theme bright colors (SUPER LIGHT PURPLES)
+  dark_bright_red = "#D999E6", -- super light magenta purple
+  dark_bright_green = "#B399D1", -- super light bluish purple
+  dark_bright_yellow = "#E699F5", -- super light bright purple
+  dark_bright_blue = "#C299D6", -- super light deep purple
+  dark_bright_purple = "#E699FF", -- super light main purple
+  dark_bright_aqua = "#A699C7", -- super light bluish purple
+  dark_bright_orange = "#D999E6", -- super light magenta purple
 
-  -- Faded colors (ROXOS ESMAECIDOS)
-  faded_red = "#4D1F5C", -- roxo magenta esmaecido
-  faded_green = "#3D2252", -- roxo azulado esmaecido
-  faded_yellow = "#522966", -- roxo brilhante esmaecido
-  faded_blue = "#42214F", -- roxo profundo esmaecido
-  faded_purple = "#521A70", -- roxo principal esmaecido
-  faded_aqua = "#382147", -- roxo azulado escuro esmaecido
-  faded_orange = "#4D1F5C", -- roxo magenta esmaecido
+  -- Faded colors (FADED PURPLES)
+  faded_red = "#4D1F5C", -- faded magenta purple
+  faded_green = "#3D2252", -- faded bluish purple
+  faded_yellow = "#522966", -- faded bright purple
+  faded_blue = "#42214F", -- faded deep purple
+  faded_purple = "#521A70", -- faded main purple
+  faded_aqua = "#382147", -- faded dark bluish purple
+  faded_orange = "#4D1F5C", -- faded magenta purple
 
-  -- Dark theme faded colors (ROXOS ESMAECIDOS CLAROS)
-  dark_faded_red = "#8A5C99", -- roxo magenta esmaecido claro
-  dark_faded_green = "#755C8A", -- roxo azulado esmaecido claro
-  dark_faded_yellow = "#9966A8", -- roxo brilhante esmaecido claro
-  dark_faded_blue = "#7D5C94", -- roxo profundo esmaecido claro
-  dark_faded_purple = "#9952B8", -- roxo principal esmaecido claro
-  dark_faded_aqua = "#6B5C80", -- roxo azulado esmaecido claro
-  dark_faded_orange = "#8A5C99", -- roxo magenta esmaecido claro
+  -- Dark theme faded colors (LIGHT FADED PURPLES)
+  dark_faded_red = "#8A5C99", -- light faded magenta purple
+  dark_faded_green = "#755C8A", -- light faded bluish purple
+  dark_faded_yellow = "#9966A8", -- light faded bright purple
+  dark_faded_blue = "#7D5C94", -- light faded deep purple
+  dark_faded_purple = "#9952B8", -- light faded main purple
+  dark_faded_aqua = "#6B5C80", -- light faded bluish purple
+  dark_faded_orange = "#8A5C99", -- light faded magenta purple
 
-  -- Red color variants (VARIAÇÕES DE ROXO MAGENTA)
-  dark_red_hard = "#2E1A3D", -- roxo magenta escuro duro
-  dark_red = "#3D1F52", -- roxo magenta escuro padrão
-  dark_red_soft = "#4A2661", -- roxo magenta escuro suave
-  light_red_hard = "#C7A3D6", -- roxo magenta claro duro
-  light_red = "#BD94CC", -- roxo magenta claro padrão
-  light_red_soft = "#B285C2", -- roxo magenta claro suave
+  -- Red color variants (MAGENTA PURPLE VARIATIONS)
+  dark_red_hard = "#2E1A3D", -- hard dark magenta purple
+  dark_red = "#3D1F52", -- standard dark magenta purple
+  dark_red_soft = "#4A2661", -- soft dark magenta purple
+  light_red_hard = "#C7A3D6", -- hard light magenta purple
+  light_red = "#BD94CC", -- standard light magenta purple
+  light_red_soft = "#B285C2", -- soft light magenta purple
 
-  -- Dark theme red variants (ROXOS MAGENTA PARA TEMA ESCURO)
-  dark_theme_red_hard = "#E6C2F0", -- roxo magenta tema escuro duro
-  dark_theme_red = "#E0B8EB", -- roxo magenta tema escuro padrão
-  dark_theme_red_soft = "#D9ADE6", -- roxo magenta tema escuro suave
+  -- Dark theme red variants (MAGENTA PURPLES FOR DARK THEME)
+  dark_theme_red_hard = "#E6C2F0", -- hard dark theme magenta purple
+  dark_theme_red = "#E0B8EB", -- standard dark theme magenta purple
+  dark_theme_red_soft = "#D9ADE6", -- soft dark theme magenta purple
 
-  -- Green color variants (VARIAÇÕES DE ROXO AZULADO)
-  dark_green_hard = "#261A3D", -- roxo azulado escuro duro
-  dark_green = "#331F52", -- roxo azulado escuro padrão
-  dark_green_soft = "#402661", -- roxo azulado escuro suave
-  light_green_hard = "#B8A3D6", -- roxo azulado claro duro
-  light_green = "#AD94CC", -- roxo azulado claro padrão
-  light_green_soft = "#A285C2", -- roxo azulado claro suave
+  -- Green color variants (BLUISH PURPLE VARIATIONS)
+  dark_green_hard = "#261A3D", -- hard dark bluish purple
+  dark_green = "#331F52", -- standard dark bluish purple
+  dark_green_soft = "#402661", -- soft dark bluish purple
+  light_green_hard = "#B8A3D6", -- hard light bluish purple
+  light_green = "#AD94CC", -- standard light bluish purple
+  light_green_soft = "#A285C2", -- soft light bluish purple
 
-  -- Dark theme green variants (ROXOS AZULADOS PARA TEMA ESCURO)
-  dark_theme_green_hard = "#D6C2F0", -- roxo azulado tema escuro duro
-  dark_theme_green = "#CCB8EB", -- roxo azulado tema escuro padrão
-  dark_theme_green_soft = "#C2ADE6", -- roxo azulado tema escuro suave
+  -- Dark theme green variants (BLUISH PURPLES FOR DARK THEME)
+  dark_theme_green_hard = "#D6C2F0", -- hard dark theme bluish purple
+  dark_theme_green = "#CCB8EB", -- standard dark theme bluish purple
+  dark_theme_green_soft = "#C2ADE6", -- soft dark theme bluish purple
 
-  -- Aqua color variants (VARIAÇÕES DE ROXO AZULADO ESCURO)
-  dark_aqua_hard = "#1F1A33", -- roxo azulado muito escuro duro
-  dark_aqua = "#261F42", -- roxo azulado muito escuro padrão
-  dark_aqua_soft = "#2D2652", -- roxo azulado muito escuro suave
-  light_aqua_hard = "#A394C7", -- roxo azulado médio claro duro
-  light_aqua = "#9485BD", -- roxo azulado médio claro padrão
-  light_aqua_soft = "#8576B3", -- roxo azulado médio claro suave
+  -- Aqua color variants (DARK BLUISH PURPLE VARIATIONS)
+  dark_aqua_hard = "#1F1A33", -- hard very dark bluish purple
+  dark_aqua = "#261F42", -- standard very dark bluish purple
+  dark_aqua_soft = "#2D2652", -- soft very dark bluish purple
+  light_aqua_hard = "#A394C7", -- hard medium light bluish purple
+  light_aqua = "#9485BD", -- standard medium light bluish purple
+  light_aqua_soft = "#8576B3", -- soft medium light bluish purple
 
-  -- Dark theme aqua variants (ROXOS AZULADOS MÉDIOS PARA TEMA ESCURO)
-  dark_theme_aqua_hard = "#C2B8E6", -- roxo azulado médio tema escuro duro
-  dark_theme_aqua = "#B8ADDB", -- roxo azulado médio tema escuro padrão
-  dark_theme_aqua_soft = "#ADA3D1", -- roxo azulado médio tema escuro suave
+  -- Dark theme aqua variants (MEDIUM BLUISH PURPLES FOR DARK THEME)
+  dark_theme_aqua_hard = "#C2B8E6", -- hard medium dark theme bluish purple
+  dark_theme_aqua = "#B8ADDB", -- standard medium dark theme bluish purple
+  dark_theme_aqua_soft = "#ADA3D1", -- soft medium dark theme bluish purple
 
-  -- Comments and UI elements (ROXO PARA COMENTÁRIOS)
-  gray = "#6B4599", -- roxo médio para comentários - contraste WCAG AA (4.59:1)
+  -- Comments and UI elements (PURPLE FOR COMMENTS)
+  gray = "#6B4599", -- medium purple for comments - WCAG AA contrast (4.59:1)
 
-  -- Dark theme gray (ROXO CLARO PARA COMENTÁRIOS EM TEMA ESCURO)
-  dark_gray = "#B399CC", -- roxo claro para comentários em tema escuro
+  -- Dark theme gray (LIGHT PURPLE FOR COMMENTS IN DARK THEME)
+  dark_gray = "#B399CC", -- light purple for comments in dark theme
 }
 
 -- get a hex list of arcanum-elixir colors based on current bg and constrast config

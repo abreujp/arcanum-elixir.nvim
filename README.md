@@ -1,7 +1,7 @@
 <div align="center">
       <h1>arcanum-elixir.nvim</h1>
       <p><em>A mystical purple colorscheme inspired by Elixir's magic for both light and dark mode coding</em></p>
-      <p><strong>🌅 Light Theme Primary</strong> • <strong>🌙 Dark Theme Available</strong></p>
+      <p><strong>🌅 Light Theme</strong> • <strong>🌙 Dark Theme</strong></p>
       <p>Optimized for comfortable development in any lighting condition</p>
 </div>
 
@@ -16,11 +16,11 @@
   <table>
     <tr>
       <td align="center">
-        <h3>🌅 Light Theme (Primary)</h3>
+        <h3>🌅 Light Theme</h3>
         <img src="light.png" alt="ArcanumElixir.nvim Light Theme" width="400"/>
       </td>
       <td align="center">
-        <h3>🌙 Dark Theme (Companion)</h3>
+        <h3>🌙 Dark Theme</h3>
         <img src="dark.png" alt="ArcanumElixir.nvim Dark Theme" width="400"/>
       </td>
     </tr>
@@ -32,11 +32,11 @@
 
 ## 🔮 About ArcanumElixir
 
-**arcanum-elixir.nvim** is a mystical Neovim colorscheme designed with an emphasis on **light mode development** while now offering a refined **dark mode companion**. Created for developers who value both functionality and magical aesthetic elegance, ArcanumElixir transforms the familiar earthtone palette into a refined purple experience inspired by Elixir's mystical powers.
+**arcanum-elixir.nvim** is a mystical Neovim colorscheme available in both light and dark themes. Created for developers who value both functionality and magical aesthetic elegance, ArcanumElixir transforms the familiar earthtone palette into a refined purple experience inspired by Elixir's mystical powers.
 
-**🌅 Light Theme Primary:** ArcanumElixir's light theme remains the primary focus, exclusively designed for light backgrounds to achieve the intended mystical coding atmosphere inspired by ancient arcane manuscripts.
+**🌅 Light Theme:** ArcanumElixir's light theme is designed for bright environments, achieving the intended mystical coding atmosphere inspired by ancient arcane manuscripts.
 
-**🌙 Dark Theme Available:** The new dark companion maintains the same purple harmony and mystical elegance, carefully adapted for low-light environments while preserving the arcane aesthetic.
+**🌙 Dark Theme:** The dark theme maintains the same purple harmony and mystical elegance, carefully adapted for low-light environments while preserving the arcane aesthetic.
 
 ### 🎨 Design Philosophy
 
@@ -52,7 +52,7 @@ ArcanumElixir draws its inspiration from the **mystical purple tones** of **Elix
 
 ### ✨ Key Features
 
-- **Dual theme support** - Primary light theme with companion dark theme
+- **Dual theme support** - Light and dark themes
 - **Based on gruvbox.nvim** - Inherits the robust architecture and reliability
 - **Purple color palette** - Mystical, arcane tones inspired by Elixir
 - **Full treesitter support** - Enhanced syntax highlighting
@@ -78,7 +78,7 @@ ArcanumElixir draws its inspiration from the **mystical purple tones** of **Elix
       -- your configuration here
     })
     
-    -- For light theme (primary)
+    -- For light theme
     vim.o.background = "light"
     vim.cmd("colorscheme arcanum_elixir")
     
@@ -98,7 +98,7 @@ use {
     require("arcanum_elixir").setup()
     
     -- Choose your preferred theme
-    vim.o.background = "light"  -- For light theme
+    vim.o.background = "light"
     vim.cmd("colorscheme arcanum_elixir")
     
     -- OR use: 
@@ -116,7 +116,7 @@ Plug 'abreujp/arcanum-elixir.nvim'
 
 Then in your init.vim:
 ```vim
-" For light theme (primary)
+" For light theme
 set background=light
 colorscheme arcanum_elixir
 
@@ -136,7 +136,7 @@ require("arcanum_elixir").setup({
 })
 
 -- Choose your preferred theme
-vim.o.background = "light"  -- For light theme
+vim.o.background = "light"
 vim.cmd("colorscheme arcanum_elixir")
 
 -- OR for dark theme
@@ -147,7 +147,7 @@ vim.cmd("colorscheme arcanum_elixir")
 ### Vim Configuration
 
 ```vim
-" For light theme (primary)
+" For light theme
 set background=light
 colorscheme arcanum_elixir
 
